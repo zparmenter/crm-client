@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import CompanyModel from "../models/company";
+import { useNavigate } from "react-router-dom";
+import CompanyModel from "../../models/company";
 
 
-function CompanyEdit() {
-    const {id} = useParams();
+function CompanyCreate() {
     const navigate = useNavigate();
     const [companyName, setName] = useState("");
     const [companyContact, setContact] = useState("");
@@ -15,9 +14,8 @@ function CompanyEdit() {
     function handleSubmit(event) {
         event.preventDefault();
         
-        CompanyModel.update({ companyName, companyContact, email, phoneNumber, logo }, id).then(
+        CompanyModel.create({ companyName, companyContact, email, phoneNumber, logo }).then(
         (data) => {
-            console.log(id)
             navigate("/companies");
         }
         );
@@ -25,7 +23,7 @@ function CompanyEdit() {
 
     return (
         <div>
-        <h2>Edit Client</h2>
+        <h2>New Client</h2>
         <form onSubmit={handleSubmit}>
             <div className='form-input'>
             <label htmlFor='companyName'>Company Name</label>
@@ -79,4 +77,4 @@ function CompanyEdit() {
     );
 }
 
-export default CompanyEdit;
+export default CompanyCreate;

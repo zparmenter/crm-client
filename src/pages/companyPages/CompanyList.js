@@ -1,9 +1,9 @@
 import React, {useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 
-import CompanyModel from '../models/company';
+import CompanyModel from '../../models/company';
 
-import CompanyCard from '../components/CompanyCard';
+import CompanyCard from '../../components/CompanyCard';
 
 function CompanyList(props) {
     const [companies, setCompanies] = useState([]);
