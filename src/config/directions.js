@@ -2,10 +2,10 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 
-import CompanyEdit from '../pages/CompanyEdit';
-import CompanyCreate from '../pages/CompanyCreate';
-import CompanyList from '../pages/CompanyList';
-import CompanyShow from '../pages/CompanyShow';
+import CompanyEdit from '../pages/companyPages/CompanyEdit';
+import CompanyCreate from '../pages/companyPages/CompanyCreate';
+import CompanyList from '../pages/companyPages/CompanyList';
+import CompanyShow from '../pages/companyPages/CompanyShow';
 import Home from '../pages/Home';
 
 export default function Directions() {
