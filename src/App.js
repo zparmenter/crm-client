@@ -1,12 +1,15 @@
 import React from 'react';
 import Directions from './config/directions';
+import { Link } from 'react-router-dom';
 import './App.css';
 
 
 function App() {
   return (
     <div>
-      <h1>Hello world</h1> 
+      <Link to={'/'}>
+        <h1>Home</h1> 
+      </Link>
       <Directions />
     </div>
   );
