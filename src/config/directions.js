@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+// import { AuditContext } from '../context/AuditContext';
+
 
 /*---------------------------COMPANY PAGE IMPORTS-----------------------------*/
 import CompanyEdit from '../pages/companyPages/CompanyEdit';
@@ -15,6 +17,8 @@ import AuditCreate from '../pages/auditPages/AuditCreate';
 import Home from '../pages/Home';
 
 export default function Directions() {
+    
+
     return(
         <Routes>
             <Route exact path='/' element={ Home } />
@@ -24,7 +28,7 @@ export default function Directions() {
             <Route exact path='/companies/createcompany' element={ <CompanyCreate />} />
 
             <Route exact path='/audits/' element={ <AuditList /> } />
-            <Route exact path='/audits/:id' element={ <AuditShow /> } />
+            <Route exact path='/audits/:id' element={ <AuditShow /> } />           
             <Route exact path='/companies/:id/createaudit' element={ <AuditCreate /> } />
 
         </Routes>

@@ -1,14 +1,15 @@
-import React, {useState, useEffect } from "react";
+import React, {useContext, useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import CompanyModel from '../../models/company';
 import CompanyCard from '../../components/CompanyCard';
+
 
 function CompanyShow() {
     let navigate = useNavigate()
     const {id} = useParams();
     const [company, setCompany] = useState(null);
-    // const [audit, setAudit] = useState(null)
-
+    
+    
 
     useEffect(function(){
         fetchCompany()
@@ -45,6 +46,9 @@ function CompanyShow() {
             <Link to={`/companies/${id}/companyedit`}>
                 <button>Edit</button>
             </Link>
+            {/* <Link to={`/audits/${value}`}>
+                <button>Audit</button>
+            </Link> */}
         </div>
         </>
     )

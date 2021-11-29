@@ -1,12 +1,12 @@
-import React, {useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from 'react-router-dom';
-
 import AuditModel from '../../models/audit';
-
 import AuditCard from '../../components/AuditCard';
+
 
 function AuditList(props) {
     const [audits, setAudits] = useState([]);
+    
 
     useEffect(
         function () {
@@ -18,6 +18,7 @@ function AuditList(props) {
     function fetchAudits() {
         AuditModel.all().then((data) => {
             setAudits(data.audits);
+            
         });
     }
 
@@ -26,6 +27,8 @@ function AuditList(props) {
             <NavLink to={`/audits/${audit._id}`} key={index}>
                 <AuditCard {...audit} />
             </NavLink>
+            // setValue(`${audit._id}`)
+            
         ));
     }
 
