@@ -10,6 +10,7 @@ import CompanyShow from '../pages/companyPages/CompanyShow';
 /*---------------------------AUDIT PAGE IMPORTS-----------------------------*/
 import AuditList from '../pages/auditPages/AuditList';
 import AuditShow from '../pages/auditPages/AuditShow';
+import AuditCreate from '../pages/auditPages/AuditCreate';
 
 import Home from '../pages/Home';
 
@@ -24,6 +25,8 @@ export default function Directions() {
 
             <Route exact path='/audits/' element={ <AuditList /> } />
             <Route exact path='/audits/:id' element={ <AuditShow /> } />
+            <Route exact path='/companies/:id/createaudit' element={ <AuditCreate /> } />
+
         </Routes>
     )
 }

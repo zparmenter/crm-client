@@ -1,23 +1,28 @@
 import React, {useState, useEffect } from "react";
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { NavLink, useParams, useNavigate } from 'react-router-dom';
 import AuditModel from '../../models/audit';
-import AuditCard from '../../components/AuditCard';
+import AuditShowCard from '../../components/AuditShowCard';
+import CompanyCard from '../../components/CompanyCard';
 
 function AuditShow(props) {
     let navigate = useNavigate()
     const {id} = useParams();
-    const [audit, setAudit] = useState(null);
+    const [audit, setAudit] = useState([]);
+    const [company, setCompany] = useState(null);
 
 
     useEffect(function(){
         fetchAudit()
+        
     }, [])
 
 
     function fetchAudit() {
         AuditModel.show(id).then((data) => {
-            console.log(props)
+            
             setAudit(data.audit);
+            setCompany(data.audit.company._id)
+            console.log(data.audit.company._id)
         });
     }
 
@@ -33,8 +38,13 @@ function AuditShow(props) {
     return( 
         <>
         <div>
-            <AuditCard {...audit} />
+            <AuditShowCard {...audit} />
         </div>
+        <NavLink to={`/companies/${company}` }>
+            <button>
+                Client
+            </button>
+        </NavLink>
         <div>
             {/* <button onClick={deleteCompany}>Delete</button> */}
             {/* <Link to={`/audits/${id}/companyedit`}> */}

@@ -1,7 +1,7 @@
 import React from "react";
 
 function AuditCard(props) {
-    console.log(props)
+    
   return (
     
     <>
