@@ -8,6 +8,9 @@ function Home() {
       <Link to={'/companies'}>
         <button>Clients</button>
       </Link>
+      <Link to={'/audits'}>
+        <button>Audits</button>
+      </Link>
     </div>
   );
 }

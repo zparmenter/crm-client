@@ -7,6 +7,7 @@ function CompanyShow() {
     let navigate = useNavigate()
     const {id} = useParams();
     const [company, setCompany] = useState(null);
+    // const [audit, setAudit] = useState(null)
 
 
     useEffect(function(){
@@ -19,6 +20,12 @@ function CompanyShow() {
             setCompany(data.company);
         });
     }
+
+    // function fetchAudit() {
+    //     AuditModel.show(id).then((data) => {
+    //         setCompany();
+    //     });
+    // }
 
     function deleteCompany() {
         CompanyModel.delete(id).then(data => {

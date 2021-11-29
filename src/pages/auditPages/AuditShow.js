@@ -2,7 +2,7 @@ import React, {useState, useEffect } from "react";
 import { NavLink, useParams, useNavigate } from 'react-router-dom';
 import AuditModel from '../../models/audit';
 import AuditShowCard from '../../components/AuditShowCard';
-import CompanyCard from '../../components/CompanyCard';
+
 
 function AuditShow(props) {
     let navigate = useNavigate()
