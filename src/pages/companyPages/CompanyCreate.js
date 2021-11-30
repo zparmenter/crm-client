@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import CompanyModel from "../../models/company";
 
 
+
 function CompanyCreate() {
     const navigate = useNavigate();
     const [companyName, setName] = useState("");
@@ -23,6 +24,7 @@ function CompanyCreate() {
 
     return (
         <div>
+        
         <h2>New Client</h2>
         <form onSubmit={handleSubmit}>
             <div className='form-input'>

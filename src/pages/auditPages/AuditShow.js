@@ -5,6 +5,8 @@ import AuditShowCard from '../../components/AuditShowCard';
 // import { AuditContext } from './AuditContext';
 
 
+
+
 function AuditShow(props) {
     let navigate = useNavigate()
     const {id} = useParams();
@@ -40,6 +42,7 @@ function AuditShow(props) {
 
     return( 
         <>
+        
         <div>
             <AuditShowCard {...audit} />
         </div>
