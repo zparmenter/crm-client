@@ -18,7 +18,6 @@ function AuditList(props) {
     function fetchAudits() {
         AuditModel.all().then((data) => {
             setAudits(data.audits);
-            
         });
     }
 
