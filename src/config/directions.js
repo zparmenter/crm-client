@@ -14,6 +14,11 @@ import AuditList from '../pages/auditPages/AuditList';
 import AuditShow from '../pages/auditPages/AuditShow';
 import AuditCreate from '../pages/auditPages/AuditCreate';
 
+/*-------------------------USER PAGE IMPORTS________________________________*/
+import UserCreate from '../pages/authpages/Register';
+import UserLogin from '../pages/authpages/Login';
+
+
 import Home from '../pages/Home';
 
 export default function Directions() {
@@ -31,6 +36,8 @@ export default function Directions() {
             <Route exact path='/audits/:id' element={ <AuditShow /> } />           
             <Route exact path='/companies/:id/createaudit' element={ <AuditCreate /> } />
 
+            <Route exact path='/register' element={ <UserCreate /> } />
+            <Route exact path='/login' element={ <UserLogin /> } />
         </Routes>
     )
 }
