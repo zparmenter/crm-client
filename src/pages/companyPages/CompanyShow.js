@@ -4,6 +4,7 @@ import CompanyModel from '../../models/company';
 import CompanyCard from '../../components/CompanyCard';
 
 
+
 function CompanyShow() {
     let navigate = useNavigate()
     const {id} = useParams();
@@ -38,6 +39,7 @@ function CompanyShow() {
 
     return( 
         <>
+        
         <div>
             <CompanyCard {...company} />
         </div>

@@ -1,9 +1,9 @@
 import React, {useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
-
 import CompanyModel from '../../models/company';
-
 import CompanyCard from '../../components/CompanyCard';
+
+
 
 function CompanyList(props) {
     const [companies, setCompanies] = useState([]);
@@ -33,6 +33,7 @@ function CompanyList(props) {
 
     return(
         <div>
+            
             <h1>Clients</h1>
             <Link to={`/companies/createcompany`}>
                 <button>Add Client</button>

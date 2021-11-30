@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import CompanyModel from "../../models/company";
 
 
+
 function CompanyEdit() {
     const {id} = useParams();
     const navigate = useNavigate();
@@ -25,6 +26,7 @@ function CompanyEdit() {
 
     return (
         <div>
+        
         <h2>Edit Client</h2>
         <form onSubmit={handleSubmit}>
             <div className='form-input'>
