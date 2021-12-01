@@ -1,14 +1,11 @@
-import React, { useContext, useState, useEffect } from "react";
-import { NavLink, Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { NavLink } from 'react-router-dom';
 import AuditModel from '../../models/audit';
 import AuditCard from '../../components/AuditCard';
-import {UserContext} from '../../UserContext';
+import Header from '../../components/Header';
 
 function AuditList(props) {
     const [audits, setAudits] = useState([]);
-    const {user, setUser} = useContext(UserContext);
-
-    
 
     useEffect(
         function () {
@@ -37,20 +34,11 @@ function AuditList(props) {
 
     return(
         <div>
-            <Link to={'/companies'}>
-                <button>companies</button>
-            </Link>
+            <Header />
             <h1>Audits List</h1><br/>
-            <pre>
-                {JSON.stringify(user, null, 2)}
-            </pre>
             <br/>
-            <button onClick={() => setUser()}>change value</button>
             # of audits: {audits.length}
             {audits.length ? generateList(audits) : <h2>Loading...</h2>}
-            
-
-            {/* {companies.length ? generateList(companies) : <button onClick={fetchCompanies}>Companies List</button>} */}
         </div>
     )
 

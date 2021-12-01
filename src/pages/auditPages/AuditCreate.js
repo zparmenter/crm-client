@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuditModel from "../../models/audit";
-
+import Header from '../../components/Header';
 
 function AuditCreate() {
     const navigate = useNavigate();
@@ -30,7 +30,7 @@ function AuditCreate() {
 
     return (
         <div>
-        
+        <Header />
         <h2>Audit Form</h2>
         <form onSubmit={handleSubmit}>
             <div className='form-input'>

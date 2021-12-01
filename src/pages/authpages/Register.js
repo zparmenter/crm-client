@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthModel from "../../models/auth";
-
+import Header from '../../components/Header';
 
 function UserCreate() {
     const navigate = useNavigate();
@@ -22,6 +22,7 @@ function UserCreate() {
 
     return (
         <div>
+        <Header />
         <h2>Register</h2>
         <form onSubmit={handleSubmit}>
             <div className='form-input'>

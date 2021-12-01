@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink, useParams } from 'react-router-dom';
 import AuditModel from '../../models/audit';
 import AuditShowCard from '../../components/AuditShowCard';
-
+import Header from '../../components/Header';
 
 
 
@@ -41,7 +41,7 @@ function AuditShow(props) {
 
     return( 
         <>
-        
+        <Header />
         <div>
             <AuditShowCard {...audit} />
         </div>

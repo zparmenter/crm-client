@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import CompanyModel from '../../models/company';
 import CompanyCard from '../../components/CompanyCard';
-
+import Header from '../../components/Header';
 
 
 function CompanyShow() {
@@ -39,7 +39,7 @@ function CompanyShow() {
 
     return( 
         <>
-        
+        <Header />
         <div>
             <CompanyCard {...company} />
         </div>

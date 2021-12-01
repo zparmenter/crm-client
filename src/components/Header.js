@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from "../UserContext";
 
 
 function Header() {
-    // const {user, setUser} = useContext(UserContext)
+    const navigate = useNavigate();
+    const {user, setUser} = useContext(UserContext)
     
     return (
             
@@ -41,7 +42,7 @@ function Header() {
                         </Link>
                     </li>
                     <li>
-                        <button>logout</button>
+                        <button onClick={() => { setUser(); navigate('/')}}>logout</button>
                     </li>
                 </ul>
         </div>
