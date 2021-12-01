@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthModel from "../../models/auth";
 import {UserContext} from '../../UserContext';
-
+import Header from '../../components/Header';
 
 function UserLogin(props) {
     const navigate = useNavigate();
@@ -25,6 +25,7 @@ function UserLogin(props) {
 
     return (
         <div>
+        <Header />
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
             <div className='form-input'>

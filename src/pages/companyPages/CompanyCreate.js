@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CompanyModel from "../../models/company";
-
+import Header from '../../components/Header';
 
 
 function CompanyCreate() {
@@ -24,7 +24,7 @@ function CompanyCreate() {
 
     return (
         <div>
-        
+        <Header />
         <h2>New Client</h2>
         <form onSubmit={handleSubmit}>
             <div className='form-input'>

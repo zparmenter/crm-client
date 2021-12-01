@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { UserContext } from '../UserContext';
 
-import Header from '../components/Header';
+
 import Home from '../pages/Home';
 
 /*---------------------------COMPANY PAGE IMPORTS-----------------------------*/
