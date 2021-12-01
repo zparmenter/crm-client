@@ -117,7 +117,7 @@ body {
 
 /*-----------------------------END OF AUTH FORMS ------------------*/
 
-/*-----------------MODEL FORMS (COMPANY/AUDIT CREATE)--------------*/
+/*-----------------MODEL FORMS (COMPANY/AUDIT CREATE/EDIT)--------------*/
 .modelDiv {
     min-height: 50vh;
     display: flex;

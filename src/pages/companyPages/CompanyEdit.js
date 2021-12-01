@@ -25,59 +25,67 @@ function CompanyEdit() {
     }
 
     return (
-        <div>
+        <>
         <Header />
+        <div class='modelDiv'>
         <h2>Edit Client</h2>
-        <form onSubmit={handleSubmit}>
-            <div className='form-input'>
+        <form class='modelForm' onSubmit={handleSubmit}>
+            <div className='form-input modelFormDiv'>
             <label htmlFor='companyName'>Company Name</label>
             <input
                 type='text'
                 name='companyName'
                 onChange={(e) => setName(e.target.value)}
                 value={companyName}
+                class='modelFormInput'
             />
             </div>
-            <div className='form-input'>
+            <div className='form-input modelFormDiv'>
             <label htmlFor='companyContact'>Company Contact</label>
             <input
                 type='text'
                 name='companyContact'
                 onChange={(e) => setContact(e.target.value)}
                 value={companyContact}
+                class='modelFormInput'
             />
             </div>
-            <div className='form-input'>
+            <div className='form-input modelFormDiv'>
             <label htmlFor='email'>Email</label>
             <input
                 type='text'
                 name='email'
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
+                class='modelFormInput'
             />
             </div>
-            <div className='form-input'>
+            <div className='form-input modelFormDiv'>
             <label htmlFor='phoneNumber'>Phone Number</label>
             <input
                 type='text'
                 name='phoneNumber'
                 onChange={(e) => setNumber(e.target.value)}
                 value={phoneNumber}
+                class='modelFormInput'
             />
             </div>
-            <div className='form-input'>
+            <div className='form-input modelFormDiv'>
             <label htmlFor='logo'>Logo</label>
             <input
                 type='text'
                 name='logo'
                 onChange={(e) => setLogo(e.target.value)}
                 value={logo}
+                class='modelFormInput'
             />
             </div>
-
-            <input type='submit' value='Save!' />
+            <div class='modelFormDiv'>
+                <input class='submitBtn' type='submit' value='Save' />
+            </div>
         </form>
         </div>
+        </>
     );
 }
 
