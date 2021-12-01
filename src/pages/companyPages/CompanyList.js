@@ -8,12 +8,9 @@ import CompanyCard from '../../components/CompanyCard';
 function CompanyList(props) {
     const [companies, setCompanies] = useState([]);
 
-    useEffect(
-        function () {
-            console.log('useeffect was called');
-            fetchCompanies();
-        }, []
-    );
+    useEffect(() => {
+        fetchCompanies()
+    }, []);
 
     function fetchCompanies() {
         CompanyModel.all().then((data) => {

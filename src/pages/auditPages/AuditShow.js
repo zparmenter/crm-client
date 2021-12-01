@@ -1,14 +1,13 @@
-import React, {useContext, useState, useEffect } from "react";
-import { NavLink, useParams, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { NavLink, useParams } from 'react-router-dom';
 import AuditModel from '../../models/audit';
 import AuditShowCard from '../../components/AuditShowCard';
-// import { AuditContext } from './AuditContext';
+
 
 
 
 
 function AuditShow(props) {
-    let navigate = useNavigate()
     const {id} = useParams();
     const [audit, setAudit] = useState([]);
     const [company, setCompany] = useState(null);

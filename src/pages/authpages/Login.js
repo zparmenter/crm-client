@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import AuthModel from "../../models/auth";
 
 
-function UserLogin() {
+
+function UserLogin(props) {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -12,17 +13,17 @@ function UserLogin() {
         event.preventDefault();
     
         AuthModel.login({ email, password }).then((response) => {
-            // verify response
-            console.log(response);
-            localStorage.setItem("uid", response.signedJwt);
-            if(response.status === 200) {
+            localStorage.setItem("uid", response.token);
+            AuthModel.profile().then((response) => {
+                console.log(response);
                 navigate('/companies')
-            }
+            });
         });
     }
 
     return (
         <div>
+        
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
             <div className='form-input'>
