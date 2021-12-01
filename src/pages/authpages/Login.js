@@ -24,32 +24,34 @@ function UserLogin(props) {
     }
 
     return (
-        <div>
+        <>
         <Header />
-        <h2>Login</h2>
-        <form onSubmit={handleSubmit}>
-            <div className='form-input'>
-            <label htmlFor='email'>Email</label>
-            <input
-                type='text'
-                name='email'
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
-            />
-            </div>
-            <div className='form-input'>
-            <label htmlFor='password'>Password</label>
-            <input
-                type='text'
-                name='password'
-                onChange={(e) => setPassword(e.target.value)}
-                value={password}
-            />
-            </div>
+        <div class='loginDiv'>
+            <h2>Login</h2>
+            <form class='loginForm' onSubmit={handleSubmit}>
+                <div className='form-input loginFormDiv'>
+                <label htmlFor='email'>Email</label>
+                <input
+                    type='text'
+                    name='email'
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                />
+                </div>
+                <div className='form-input loginFormDiv'>
+                <label htmlFor='password'>Password</label>
+                <input
+                    type='text'
+                    name='password'
+                    onChange={(e) => setPassword(e.target.value)}
+                    value={password}
+                />
+                </div>
 
-            <input type='submit' value='Save!' />
-        </form>
+                <input type='submit' value='Save!' />
+            </form>
         </div>
+        </>
     );
 
 

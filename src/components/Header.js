@@ -9,40 +9,35 @@ function Header() {
     
     return (
             
-        <div style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-        }}>
+        <div class='headerDiv'>
             <Link to={'/'}>
                 <h1>Home</h1>
             </Link>
-                <ul style={{display: 'flex', flexDirection: 'row'}}>
-                    <li>
+                <ul class='headerList'>
+                    <li class='headerListItem'>
                         <Link to={'/companies'}>
-                            <button>companies</button>
+                            <button class='headerListBtn'>companies</button>
                         </Link>
                     </li>
-                    <li>
+                    <li class='headerListItem'>
                         <Link to={'/audits'}>
-                            <button>audits</button>
+                            <button class='headerListBtn'>audits</button>
                         </Link>
                     </li>
                 </ul>
-                <ul style={{display: 'flex', flexDirection: 'row'}}>
-                    <li>
+                <ul class='headerList'>
+                    <li class='headerListItem'>
                         <Link to={'/register'}>
-                            <button>register</button>
+                            <button class='headerListBtn'>register</button>
                         </Link>
                     </li>
-                    <li>
+                    <li class='headerListItem'>
                         <Link to={'/login'}>
-                            <button>login</button>
+                            <button class='headerListBtn'>login</button>
                         </Link>
                     </li>
-                    <li>
-                        <button onClick={() => { setUser(); navigate('/')}}>logout</button>
+                    <li class='headerListItem'>
+                        <button class='headerListBtn' onClick={() => { setUser(); navigate('/')}}>logout</button>
                     </li>
                 </ul>
         </div>
