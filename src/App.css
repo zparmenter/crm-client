@@ -148,3 +148,14 @@ body {
 .modelFormInput {
     width: 50vw;
 }
+
+/*---------------------------------COMPANY SHOW PAGE--------------------*/
+.companyInfo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.companyShowBtn {
+    margin-left: 10px;
+    margin-top: 10px;
+}
