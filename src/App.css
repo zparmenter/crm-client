@@ -176,3 +176,17 @@ body {
 .auditBtn {
     margin-left: 10px;
 }
+
+/*--------------------------AUDIT LIST PAGE--------------------------*/
+
+.auditListDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.auditListCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

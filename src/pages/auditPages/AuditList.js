@@ -23,7 +23,7 @@ function AuditList(props) {
     function generateList(audits) {
         return audits.map((audit, index) => (
             <NavLink to={`/audits/${audit._id}`} key={index}>
-                <AuditCard {...audit} />
+                <AuditCard className='auditListCard' {...audit} />
             </NavLink>
             // setValue(`${audit._id}`)
             
@@ -33,13 +33,15 @@ function AuditList(props) {
 
 
     return(
-        <div>
-            <Header />
-            <h1>Audits List</h1><br/>
-            <br/>
-            # of audits: {audits.length}
-            {audits.length ? generateList(audits) : <h2>Loading...</h2>}
-        </div>
+        <>
+        <Header />
+        <h1>Audits List</h1><br/><br/>
+        # of audits: {audits.length}
+            <div class='auditListDiv'>
+                
+                {audits.length ? generateList(audits) : <h2>Loading...</h2>}
+            </div>
+        </>
     )
 
 
