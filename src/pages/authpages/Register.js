@@ -21,11 +21,12 @@ function UserCreate() {
     }
 
     return (
-        <div>
+        <>
         <Header />
+        <div class='authDiv'>
         <h2>Register</h2>
-        <form onSubmit={handleSubmit}>
-            <div className='form-input'>
+        <form class='authForm' onSubmit={handleSubmit}>
+            <div className='form-input authFormDiv'>
             <label htmlFor='username'>Username</label>
             <input
                 type='text'
@@ -34,7 +35,7 @@ function UserCreate() {
                 value={username}
             />
             </div>
-            <div className='form-input'>
+            <div className='form-input authFormDiv'>
             <label htmlFor='email'>Email</label>
             <input
                 type='text'
@@ -43,7 +44,7 @@ function UserCreate() {
                 value={email}
             />
             </div>
-            <div className='form-input'>
+            <div className='form-input authFormDiv'>
             <label htmlFor='password'>Password</label>
             <input
                 type='text'
@@ -53,9 +54,12 @@ function UserCreate() {
             />
             </div>
 
-            <input type='submit' value='Save!' />
+            <div class='authFormDiv'>
+                    <input  type='submit' value='Register' />
+            </div>
         </form>
         </div>
+        </>
     );
 
 

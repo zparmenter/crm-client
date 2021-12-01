@@ -26,10 +26,10 @@ function UserLogin(props) {
     return (
         <>
         <Header />
-        <div class='loginDiv'>
+        <div class='authDiv'>
             <h2>Login</h2>
-            <form class='loginForm' onSubmit={handleSubmit}>
-                <div className='form-input loginFormDiv'>
+            <form class='authForm' onSubmit={handleSubmit}>
+                <div className='form-input authFormDiv'>
                 <label htmlFor='email'>Email</label>
                 <input
                     type='text'
@@ -38,7 +38,7 @@ function UserLogin(props) {
                     value={email}
                 />
                 </div>
-                <div className='form-input loginFormDiv'>
+                <div className='form-input authFormDiv'>
                 <label htmlFor='password'>Password</label>
                 <input
                     type='text'
@@ -47,8 +47,9 @@ function UserLogin(props) {
                     value={password}
                 />
                 </div>
-
-                <input type='submit' value='Save!' />
+                <div class='authFormDiv'>
+                    <input  type='submit' value='Login' />
+                </div>
             </form>
         </div>
         </>
