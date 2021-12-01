@@ -1,4 +1,4 @@
-const url = "http://localhost:4000/api/v1";
+const url = `http://localhost:4000/api/v1`
 
 class AuthModel {
 
@@ -21,6 +21,17 @@ class AuthModel {
       body: JSON.stringify(data),
     }).then((response) => response.json());
   };
+
+  static profile = () => {
+    console.log(localStorage.uid)
+    return fetch(`${url}/profile`, {
+      method: "GET",
+      headers: { 
+        authorization: `Bearer ${localStorage.getItem("uid")}`, 
+        
+      },
+    }).then((response) => response.json());
+  }
 
 }
 
