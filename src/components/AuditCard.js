@@ -5,7 +5,7 @@ function AuditCard(props) {
   return (
     
     <>
-      <div class='auditListCard'>
+      <div class='modelListCard'>
         <div>
             <h1>{ props.company.companyName }</h1>
         </div>

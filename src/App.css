@@ -177,14 +177,14 @@ body {
     margin-left: 10px;
 }
 
-/*--------------------------AUDIT LIST PAGE--------------------------*/
+/*--------------------------AUDIT/COMPANY LIST PAGE--------------------------*/
 
-.auditListDiv {
+.modelListDiv {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.auditListCard {
+.modelListCard {
     display: flex;
     flex-direction: column;
     justify-content: center;
