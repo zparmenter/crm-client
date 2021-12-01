@@ -1,16 +1,59 @@
 :root {
     --secondaryColor: rgba(247, 148, 0);
     --mainColor: rgb(4, 149, 192);
-
+    --editBtnColor: rgb(36, 157, 60);
+    --deleteBtnColor: rgb(215, 47, 60);
+    --submitBtnColor: rgb(97, 106, 114);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Spartan&display=swap');
 
 body {
     background-color: var(--mainColor);
     color: white;
     font-family: 'Spartan', sans-serif;
 }
+
+/*----------------------BUTTONS---------------------------*/
+
+.editBtn {
+    color: white;
+    background-color: var(--editBtnColor);
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.deleteBtn {
+    color: white;
+    background-color: var(--deleteBtnColor);
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.submitBtn {
+    color: white;
+    background-color: var(--submitBtnColor);
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*-------------------END OF BUTTONS------------------------*/
 
 /*-----------------------HEADER CSS------------------------*/
 
@@ -81,23 +124,27 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .modelForm {
     border-radius: 10px;
     border: 2px solid white;
-    padding-left: 175px;
+    padding-left: 10px;
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-right: 175px;
-
-    width: fit-content;
+    padding-right: 10px;
+    
 }
 
 .modelFormDiv {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 15px;
+}
+
+.modelFormInput {
+    width: 50vw;
 }

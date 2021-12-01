@@ -48,9 +48,9 @@ function CompanyShow() {
             <Link to={`/companies/${id}/companyedit`}>
                 <button>Edit</button>
             </Link>
-            {/* <Link to={`/audits/${value}`}>
-                <button>Audit</button>
-            </Link> */}
+            <Link to={`createaudit`}>
+                <button>Create Audit</button>
+            </Link>
         </div>
         </>
     )
