@@ -23,7 +23,7 @@ function AuditList(props) {
     function generateList(audits) {
         return audits.map((audit, index) => (
             <NavLink to={`/audits/${audit._id}`} key={index}>
-                <AuditCard className='auditListCard' {...audit} />
+                <AuditCard  {...audit} />
             </NavLink>
             // setValue(`${audit._id}`)
             
@@ -37,7 +37,7 @@ function AuditList(props) {
         <Header />
         <h1>Audits List</h1><br/><br/>
         # of audits: {audits.length}
-            <div class='auditListDiv'>
+            <div class='modelListDiv'>
                 
                 {audits.length ? generateList(audits) : <h2>Loading...</h2>}
             </div>
