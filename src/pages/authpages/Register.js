@@ -55,7 +55,7 @@ function UserCreate() {
             </div>
 
             <div class='authFormDiv'>
-                    <input  type='submit' value='Register' />
+                    <input  class='submitBtn' type='submit' value='Register' />
             </div>
         </form>
         </div>

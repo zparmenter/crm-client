@@ -48,7 +48,7 @@ function UserLogin(props) {
                 />
                 </div>
                 <div class='authFormDiv'>
-                    <input  type='submit' value='Login' />
+                    <input class='submitBtn' type='submit' value='Login' />
                 </div>
             </form>
         </div>
