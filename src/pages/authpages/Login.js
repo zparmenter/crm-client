@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthModel from "../../models/auth";
-
+import {UserContext} from '../../UserContext';
 
 
 function UserLogin(props) {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const {user, setUser} = useContext(UserContext);
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -16,6 +17,7 @@ function UserLogin(props) {
             localStorage.setItem("uid", response.token);
             AuthModel.profile().then((response) => {
                 console.log(response);
+                setUser(response)
                 navigate('/companies')
             });
         });
@@ -23,7 +25,6 @@ function UserLogin(props) {
 
     return (
         <div>
-        
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
             <div className='form-input'>
