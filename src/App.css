@@ -43,9 +43,9 @@ body {
 
 /*---------------------END OF HEADER STYLES-----------------*/
 
-/*-----------------------LOGIN PAGE------------------------*/
+/*-----------------------AUTH FORMS------------------------*/
 
-.loginDiv {
+.authDiv {
     min-height: 50vh;
     display: flex;
     flex-direction: column;
@@ -53,7 +53,7 @@ body {
     align-items: center;
 }
 
-.loginForm {
+.authForm {
     border-radius: 10px;
     border: 2px solid white;
     padding-left: 175px;
@@ -64,9 +64,40 @@ body {
     width: fit-content;
 }
 
-.loginFormDiv {
+.authFormDiv {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
+}
+
+/*-----------------------------END OF AUTH FORMS ------------------*/
+
+/*------------------------MODEL FORMS (COMPANY/AUDIT)----------------------*/
+.modelDiv {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modelForm {
+    border-radius: 10px;
+    border: 2px solid white;
+    padding-left: 175px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 175px;
+
+    width: fit-content;
+}
+
+.modelFormDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
 }
