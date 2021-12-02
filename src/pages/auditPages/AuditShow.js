@@ -45,13 +45,13 @@ function AuditShow(props) {
         <div>
             <AuditShowCard {...audit} />
         </div>
-        <div class='auditShowBtns'>
+        <div className='auditShowBtns'>
             {/* <button onClick={deleteCompany}>Delete</button> */}
             {/* <Link to={`/audits/${id}/companyedit`}> */}
-                <button class='editBtn auditBtn'>Edit</button>
+                <button className='editBtn auditBtn'>Edit</button>
             {/* </Link> */}
         <NavLink to={`/companies/${company}` }>
-            <button class='submitBtn auditBtn'>
+            <button className='submitBtn auditBtn'>
                 Client
             </button>
         </NavLink>

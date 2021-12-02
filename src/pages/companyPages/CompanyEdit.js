@@ -27,9 +27,9 @@ function CompanyEdit() {
     return (
         <>
         <Header />
-        <div class='modelDiv'>
+        <div className='modelDiv'>
         <h2>Edit Client</h2>
-        <form class='modelForm' onSubmit={handleSubmit}>
+        <form className='modelForm' onSubmit={handleSubmit}>
             <div className='form-input modelFormDiv'>
             <label htmlFor='companyName'>Company Name</label>
             <input
@@ -37,7 +37,7 @@ function CompanyEdit() {
                 name='companyName'
                 onChange={(e) => setName(e.target.value)}
                 value={companyName}
-                class='modelFormInput'
+                className='modelFormInput'
             />
             </div>
             <div className='form-input modelFormDiv'>
@@ -47,7 +47,7 @@ function CompanyEdit() {
                 name='companyContact'
                 onChange={(e) => setContact(e.target.value)}
                 value={companyContact}
-                class='modelFormInput'
+                className='modelFormInput'
             />
             </div>
             <div className='form-input modelFormDiv'>
@@ -57,7 +57,7 @@ function CompanyEdit() {
                 name='email'
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
-                class='modelFormInput'
+                className='modelFormInput'
             />
             </div>
             <div className='form-input modelFormDiv'>
@@ -67,7 +67,7 @@ function CompanyEdit() {
                 name='phoneNumber'
                 onChange={(e) => setNumber(e.target.value)}
                 value={phoneNumber}
-                class='modelFormInput'
+                className='modelFormInput'
             />
             </div>
             <div className='form-input modelFormDiv'>
@@ -77,11 +77,11 @@ function CompanyEdit() {
                 name='logo'
                 onChange={(e) => setLogo(e.target.value)}
                 value={logo}
-                class='modelFormInput'
+                className='modelFormInput'
             />
             </div>
-            <div class='modelFormDiv'>
-                <input class='submitBtn' type='submit' value='Save' />
+            <div className='modelFormDiv'>
+                <input className='submitBtn' type='submit' value='Save' />
             </div>
         </form>
         </div>

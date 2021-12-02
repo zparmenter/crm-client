@@ -31,7 +31,9 @@ export default function Directions() {
             <Routes>
 
                 {user ? (
-                <React.Fragment>   
+                <React.Fragment>  
+                    <Route exact path='/' element={ Home } />
+                    
                     <Route exact path='/companies/' element={ <CompanyList  /> } />
                     <Route exact path='/companies/:id' element={ <CompanyShow /> } />
                     <Route exact path='/companies/:id/companyedit' element={ <CompanyEdit /> } />

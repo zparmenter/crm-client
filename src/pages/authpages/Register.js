@@ -23,9 +23,9 @@ function UserCreate() {
     return (
         <>
         <Header />
-        <div class='authDiv'>
+        <div className='authDiv'>
         <h2>Register</h2>
-        <form class='authForm' onSubmit={handleSubmit}>
+        <form className='authForm' onSubmit={handleSubmit}>
             <div className='form-input authFormDiv'>
             <label htmlFor='username'>Username</label>
             <input
@@ -54,8 +54,8 @@ function UserCreate() {
             />
             </div>
 
-            <div class='authFormDiv'>
-                    <input  class='submitBtn' type='submit' value='Register' />
+            <div className='authFormDiv'>
+                    <input  className='submitBtn' type='submit' value='Register' />
             </div>
         </form>
         </div>
