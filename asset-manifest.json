@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/zparmenter/crm-client/tree/master/static/css/main.03e6273c.chunk.css",
+    "main.js": "/zparmenter/crm-client/tree/master/static/js/main.7bcab338.chunk.js",
+    "main.js.map": "/zparmenter/crm-client/tree/master/static/js/main.7bcab338.chunk.js.map",
+    "runtime-main.js": "/zparmenter/crm-client/tree/master/static/js/runtime-main.801d3ae1.js",
+    "runtime-main.js.map": "/zparmenter/crm-client/tree/master/static/js/runtime-main.801d3ae1.js.map",
+    "static/js/2.b0eda53b.chunk.js": "/zparmenter/crm-client/tree/master/static/js/2.b0eda53b.chunk.js",
+    "static/js/2.b0eda53b.chunk.js.map": "/zparmenter/crm-client/tree/master/static/js/2.b0eda53b.chunk.js.map",
+    "index.html": "/zparmenter/crm-client/tree/master/index.html",
+    "static/css/main.03e6273c.chunk.css.map": "/zparmenter/crm-client/tree/master/static/css/main.03e6273c.chunk.css.map",
+    "static/js/2.b0eda53b.chunk.js.LICENSE.txt": "/zparmenter/crm-client/tree/master/static/js/2.b0eda53b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.801d3ae1.js",
+    "static/js/2.b0eda53b.chunk.js",
+    "static/css/main.03e6273c.chunk.css",
+    "static/js/main.7bcab338.chunk.js"
+  ]
+}
