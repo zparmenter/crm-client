@@ -9,7 +9,6 @@ function AuditList(props) {
 
     useEffect(
         function () {
-            console.log('useeffect was called');
             fetchAudits();
         }, []
     );
@@ -25,7 +24,6 @@ function AuditList(props) {
             <NavLink to={`/audits/${audit._id}`} key={index}>
                 <AuditCard  {...audit} />
             </NavLink>
-            // setValue(`${audit._id}`)
             
         ));
     }

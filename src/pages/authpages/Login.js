@@ -16,7 +16,6 @@ function UserLogin(props) {
         AuthModel.login({ email, password }).then((response) => {
             localStorage.setItem("uid", response.token);
             AuthModel.profile().then((response) => {
-                console.log(response);
                 setUser(response)
                 navigate('/companies')
             });

@@ -23,7 +23,6 @@ class AuthModel {
   };
 
   static profile = () => {
-    console.log(localStorage.uid)
     return fetch(`${url}/profile`, {
       method: "GET",
       headers: { 

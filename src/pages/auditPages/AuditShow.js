@@ -22,18 +22,15 @@ function AuditShow(props) {
 
     function fetchAudit() {
         AuditModel.show(id).then((data) => {
-            
             setAudit(data.audit);
             setCompany(data.audit.company._id)
-            
-            console.log(data.audit._id)
         });
     }
 
     /* --------this is here if we want to add delete to this later --------*/
-    // function deleteCompany() {
-    //     CompanyModel.delete(id).then(data => {
-    //         navigate('/companies')
+    // function deleteAudit() {
+    //     AuditModel.delete(id).then(data => {
+    //         navigate('/audits')
     //     })
     // }
 
@@ -46,7 +43,6 @@ function AuditShow(props) {
             <AuditShowCard {...audit} />
         </div>
         <div className='auditShowBtns'>
-            {/* <button onClick={deleteCompany}>Delete</button> */}
             {/* <Link to={`/audits/${id}/companyedit`}> */}
                 <button className='editBtn auditBtn'>Edit</button>
             {/* </Link> */}
