@@ -2,46 +2,63 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from "../UserContext";
 
-
 function Header() {
     const navigate = useNavigate();
     const {user, setUser} = useContext(UserContext)
     
     return (
             
-        <div class='headerDiv'>
+        
+        <>
+        {user ? (
+            <div className='headerDiv'>
             <Link to={'/'}>
-                <h1>Home</h1>
+                <h2>Home</h2>
             </Link>
-                <ul class='headerList'>
-                    <li class='headerListItem'>
+                <ul className='headerList'>
+                    <li className='headerListItem'>
                         <Link to={'/companies'}>
-                            <button class='headerListBtn'>companies</button>
+                            <button className='headerListBtn'>companies</button>
                         </Link>
                     </li>
-                    <li class='headerListItem'>
+                    <li className='headerListItem'>
                         <Link to={'/audits'}>
-                            <button class='headerListBtn'>audits</button>
+                            <button className='headerListBtn'>audits</button>
                         </Link>
                     </li>
                 </ul>
-                <ul class='headerList'>
+                <ul className='headerList'>
+                    <li className='headerListItem'>
+                        <button className='headerListBtn' onClick={() => { setUser(); navigate('/')}}>logout</button>
+                    </li>
+                </ul>
+        </div>
+        ) : 
+            
+        (
+        <div className='headerDiv'>
+            <Link to={'/'}>
+                <h2>Home</h2>
+            </Link>
+                <ul className='headerList'>
+                </ul>
+                <ul className='headerList'>
                     <li class='headerListItem'>
                         <Link to={'/register'}>
                             <button class='headerListBtn'>register</button>
                         </Link>
                     </li>
-                    <li class='headerListItem'>
+                    <li className='headerListItem'>
                         <Link to={'/login'}>
-                            <button class='headerListBtn'>login</button>
+                            <button className='headerListBtn'>login</button>
                         </Link>
                     </li>
-                    <li class='headerListItem'>
-                        <button class='headerListBtn' onClick={() => { setUser(); navigate('/')}}>logout</button>
+                    <li className='headerListItem'>
+                        <button className='headerListBtn' onClick={() => { setUser(); navigate('/')}}>logout</button>
                     </li>
                 </ul>
-        </div>
-    
+        </div>)}
+        </>
     );
 }
 

@@ -33,11 +33,11 @@ function CompanyList(props) {
             <Header />
             <h1>Clients</h1>
             <Link to={`/companies/createcompany`}>
-                <button class='submitBtn'>Add Client</button>
+                <button className='submitBtn'>Add Client</button>
             </Link><br/><br/>
 
             # of clients: {companies.length}
-            <div class='modelListDiv'>
+            <div className='modelListDiv'>
                 {companies.length ? generateList(companies) : <h2>Loading...</h2>}
             </div>
         </>

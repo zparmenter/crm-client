@@ -42,19 +42,19 @@ function CompanyShow(props) {
         <div>
             <CompanyCard {...company} />
         </div>
-        <div class='companyInfo'>
+        <div className='companyInfo'>
             Company Name: {JSON.stringify(company, ['companyName'])}<br/>
             Contact: {JSON.stringify(company, ['companyContact'])}<br/>
             Email: {JSON.stringify(company, ['email'])}<br/>
             Phone Number: {JSON.stringify(company, ['phoneNumber'])}<br/>
         </div>
         <div>
-            <button class='deleteBtn companyShowBtn' onClick={deleteCompany}>Delete</button>
+            <button className='deleteBtn companyShowBtn' onClick={deleteCompany}>Delete</button>
             <Link to={`/companies/${id}/companyedit`}>
-                <button class='editBtn companyShowBtn'>Edit</button>
+                <button className='editBtn companyShowBtn'>Edit</button>
             </Link><br/>
             <Link to={`createaudit`}>
-                <button class='submitBtn companyShowBtn'>Create Audit</button>
+                <button className='submitBtn companyShowBtn'>Create Audit</button>
             </Link>
         </div>
         </>

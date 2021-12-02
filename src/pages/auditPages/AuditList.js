@@ -37,7 +37,7 @@ function AuditList(props) {
         <Header />
         <h1>Audits List</h1><br/><br/>
         # of audits: {audits.length}
-            <div class='modelListDiv'>
+            <div className='modelListDiv'>
                 
                 {audits.length ? generateList(audits) : <h2>Loading...</h2>}
             </div>

@@ -26,9 +26,9 @@ function UserLogin(props) {
     return (
         <>
         <Header />
-        <div class='authDiv'>
+        <div className='authDiv'>
             <h2>Login</h2>
-            <form class='authForm' onSubmit={handleSubmit}>
+            <form className='authForm' onSubmit={handleSubmit}>
                 <div className='form-input authFormDiv'>
                 <label htmlFor='email'>Email</label>
                 <input
@@ -47,8 +47,8 @@ function UserLogin(props) {
                     value={password}
                 />
                 </div>
-                <div class='authFormDiv'>
-                    <input class='submitBtn' type='submit' value='Login' />
+                <div className='authFormDiv'>
+                    <input className='submitBtn' type='submit' value='Login' />
                 </div>
             </form>
         </div>

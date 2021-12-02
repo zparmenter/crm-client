@@ -31,9 +31,9 @@ function AuditCreate() {
     return (
         <>
         <Header />
-        <div class='modelDiv'>
+        <div className='modelDiv'>
         <h2>Audit Form</h2>
-        <form class='modelForm' onSubmit={handleSubmit}>
+        <form className='modelForm' onSubmit={handleSubmit}>
             <div className='form-input modelFormDiv'>
             <label htmlFor='company'>Company</label>
             <input
@@ -41,7 +41,7 @@ function AuditCreate() {
                 name='company'
                 onChange={(e) => setCompany(e.target.value)}
                 value={company}
-                class='modelFormInput'
+                className='modelFormInput'
             />
             </div>
             <div className='form-input modelFormDiv'>
@@ -51,7 +51,7 @@ function AuditCreate() {
                 name='instagramUrl'
                 onChange={(e) => setInstagramUrl(e.target.value)}
                 value={instagramUrl}
-                class='modelFormInput'
+                className='modelFormInput'
             />
             </div>
             <div className='form-input modelFormDiv'>
@@ -61,7 +61,7 @@ function AuditCreate() {
                 name='instagramUrl2'
                 onChange={(e) => setInstagramUrl2(e.target.value)}
                 value={instagramUrl2}
-                class='modelFormInput'
+                className='modelFormInput'
             />
             </div>
             <div className='form-input modelFormDiv'>
@@ -71,7 +71,7 @@ function AuditCreate() {
                 name='facebookUrl'
                 onChange={(e) => setFacebookUrl(e.target.value)}
                 value={facebookUrl}
-                class='modelFormInput'
+                className='modelFormInput'
             />
             </div>
             <div className='form-input modelFormDiv'>
@@ -81,7 +81,7 @@ function AuditCreate() {
                 name='facebookUrl2'
                 onChange={(e) => setFacebookUrl2(e.target.value)}
                 value={facebookUrl2}
-                class='modelFormInput'
+                className='modelFormInput'
             />
             </div>
             <div className='form-input modelFormDiv'>
@@ -91,7 +91,7 @@ function AuditCreate() {
                 name='twitterUrl'
                 onChange={(e) => setTwitterUrl(e.target.value)}
                 value={twitterUrl}
-                class='modelFormInput'
+                className='modelFormInput'
             />
             </div>
             <div className='form-input modelFormDiv'>
@@ -101,7 +101,7 @@ function AuditCreate() {
                 name='twitterUrl2'
                 onChange={(e) => setTwitterUrl2(e.target.value)}
                 value={twitterUrl2}
-                class='modelFormInput'
+                className='modelFormInput'
             />
             </div>
             <div className='form-input modelFormDiv'>
@@ -111,7 +111,7 @@ function AuditCreate() {
                 name='googleUrl'
                 onChange={(e) => setGoogleUrl(e.target.value)}
                 value={googleUrl}
-                class='modelFormInput'
+                className='modelFormInput'
             />
             </div>
             <div className='form-input modelFormDiv'>
@@ -121,7 +121,7 @@ function AuditCreate() {
                 name='googleUrl'
                 onChange={(e) => setGoogleUrl2(e.target.value)}
                 value={googleUrl2}
-                class='modelFormInput'
+                className='modelFormInput'
             />
             </div>
             
@@ -132,7 +132,7 @@ function AuditCreate() {
                 name='phoneNumber'
                 onChange={(e) => setNumber(e.target.value)}
                 value={phoneNumber}
-                class='modelFormInput'
+                className='modelFormInput'
             />
             </div>
             <div className='form-input modelFormDiv'>
@@ -142,7 +142,7 @@ function AuditCreate() {
                 name='address'
                 onChange={(e) => setAddress(e.target.value)}
                 value={address}
-                class='modelFormInput'
+                className='modelFormInput'
             />
             </div>
             <div className='form-input modelFormDiv'>
@@ -152,11 +152,11 @@ function AuditCreate() {
                 name='website'
                 onChange={(e) => setWebsite(e.target.value)}
                 value={website}
-                class='modelFormInput'
+                className='modelFormInput'
             />
             </div>
-            <div class='modelFormDiv'>
-                <input class='submitBtn' type='submit' value='Submit' />
+            <div className='modelFormDiv'>
+                <input className='submitBtn' type='submit' value='Submit' />
             </div>
         </form>
         </div>

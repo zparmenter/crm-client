@@ -4,7 +4,7 @@ function CompanyCard(props) {
   return (
     
       <>
-        <div class='modelListCard'>
+        <div className='modelListCard'>
           <div>
             <h1>{ props.companyName }</h1>
           </div>
