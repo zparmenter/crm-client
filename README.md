@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# highstreethub social/digital media CRM 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Scope
 
-## Available Scripts
+highstreethub is a social/digital media CRM for a small business (1-5 employees) can manage their clients, leave notes, and audit potential clients before 
+making sales calls. It's supposed to be a very simplified version of some of the other major CRM's available. Sometimes you don't need all the extra's.
 
-In the project directory, you can run:
+# User Stories
 
-### `yarn start`
+as a highstreethub user, you want to be able to create a client, audit the clients presence and be able to leave notes for any interaction you have with
+the client in order to ensure the next person who speaks with them knows what was previously discussed OR so the person in charge of making changes to an
+account/platform can do so accurately. The user should also be able to create posts from the images available for the client and view previous posts for 
+inspiration and to make sure the user is not making the same post that was recently made (the images, posting, and notes are currently unavailable for version
+one. Version 1 is simply an MVP which allows for client creation and auditing. Notes is the next big addition that needs to be made)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Approach
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+From my previous experience working for GoDaddy social, I knew better what the scope of this project could be. Because there are many different business segments using the same tool, planning ahead for those future possibilities provided for better thinking of scalability in the future if the small business becomes medium
+or large in the future. With that being said, trying to keep it as simple as possible without a knowledge base is essential for the small business.
 
-### `yarn test`
+# Milestones 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I only had 2 weeks to get this built out for the capstone project of the General Assembly bootcamp, so it was very important to make sure it was deployed and 
+working even if all the features were not added yet. While accomplishing this more tough than expected, I still want to add at least the note taking feature
+before putting the project down for a while. 
 
-### `yarn build`
+# WireFrames
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Screen Shot 2021-12-09 at 11 16 49 AM](https://user-images.githubusercontent.com/68616195/145444261-c5cd8e8a-1547-477f-b0cc-b5ac025aa720.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Screen Shot 2021-12-09 at 11 17 41 AM](https://user-images.githubusercontent.com/68616195/145444404-b99d923e-da54-4b33-9fb0-152c3f51cd44.png)
+ ![Screen Shot 2021-12-09 at 11 18 03 AM](https://user-images.githubusercontent.com/68616195/145444485-ee3adca8-2ea2-4053-b8fe-5410ea42ff86.png)
+![Screen Shot 2021-12-09 at 11 18 43 AM](https://user-images.githubusercontent.com/68616195/145444606-ba89359d-7d8f-4ad0-85d0-f3c22bbeaf9d.png)
+![Screen Shot 2021-12-09 at 11 19 09 AM](https://user-images.githubusercontent.com/68616195/145444669-5b5b3803-5f46-4548-982f-7367aaedbd67.png)
+![Screen Shot 2021-12-09 at 11 19 45 AM](https://user-images.githubusercontent.com/68616195/145444751-ec0191a1-be21-4fad-af30-67a752b8b4b9.png)
+![Screen Shot 2021-12-09 at 11 20 17 AM](https://user-images.githubusercontent.com/68616195/145444837-e8ef2e8d-0628-42e5-a58a-a886826d888b.png)
 
-### `yarn eject`
+# ERD
+ ![Screen Shot 2021-12-09 at 11 22 21 AM](https://user-images.githubusercontent.com/68616195/145445181-410a847c-5eb3-4949-9537-f7b0a8988467.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 
