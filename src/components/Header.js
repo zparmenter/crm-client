@@ -1,55 +1,65 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link, useNavigate } from 'react-router-dom';
+import { UserContext } from "../UserContext";
 
-import { Link } from "react-router-dom";
-
-import { useRecoilState } from "recoil";
-import { userState } from "../recoil/atoms";
-
-const Header = () => {
-  const [user, setUser] = useRecoilState(userState);
-
-  function login() {
-    const dbUser = {
-      username: "Test user",
-      avatar:
-        "https://gamespot1.cbsistatic.com/uploads/scale_landscape/1587/15875866/3660435-avatar.jpg",
-    };
-    setUser(dbUser);
-  }
-
-  // logout function will simply set the user back to null
-  function logout() {
-    setUser(null);
-  }
-
+function Header() {
+    const navigate = useNavigate();
+    const {user, setUser} = useContext(UserContext)
+    
     return (
-        <header>
-        <div className='logo'>
-            <Link to={"/"}>Home</Link>
+            
+        
+        <>
+        {user ? (
+            <div className='headerDiv'>
+            <Link to={'/'}>
+                <h2>Home</h2>
+            </Link>
+                <ul className='headerList'>
+                    <li className='headerListItem'>
+                        <Link to={'/companies'}>
+                            <button className='headerListBtn'>companies</button>
+                        </Link>
+                    </li>
+                    <li className='headerListItem'>
+                        <Link to={'/audits'}>
+                            <button className='headerListBtn'>audits</button>
+                        </Link>
+                    </li>
+                </ul>
+                <ul className='headerList'>
+                    <li className='headerListItem'>
+                        <button className='headerListBtn' onClick={() => { setUser(); navigate('/')}}>logout</button>
+                    </li>
+                </ul>
         </div>
-        <div className='links'>
-            <ul>
-            {user ? (
-                <>
-                <li>
-                    <Link to={"/companies"}>
-                        <button>Clients</button>
-                    </Link>
-                </li>
-                // logout element to set the user back to null on click
-                <li className='btn' onClick={logout}>
-                    <button>Log Out</button>
-                </li>
-                </>
-            ) : (
-                <li className='btn' onClick={login}>
-                    <button>Login</button>
-                </li>
-            )}
-            </ul>
-        </div>
-        </header>
+        ) : 
+            
+        (
+        <div className='headerDiv'>
+            <Link to={'/'}>
+                <h2>Home</h2>
+            </Link>
+                <ul className='headerList'>
+                </ul>
+                <ul className='headerList'>
+                    <li class='headerListItem'>
+                        <Link to={'/register'}>
+                            <button class='headerListBtn'>register</button>
+                        </Link>
+                    </li>
+                    <li className='headerListItem'>
+                        <Link to={'/login'}>
+                            <button className='headerListBtn'>login</button>
+                        </Link>
+                    </li>
+                    <li className='headerListItem'>
+                        <button className='headerListBtn' onClick={() => { setUser(); navigate('/')}}>logout</button>
+                    </li>
+                </ul>
+        </div>)}
+        </>
     );
-};
+}
 
 export default Header;

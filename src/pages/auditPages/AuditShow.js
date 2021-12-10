@@ -1,14 +1,13 @@
-import React, {useContext, useState, useEffect } from "react";
-import { NavLink, useParams, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { NavLink, useParams } from 'react-router-dom';
 import AuditModel from '../../models/audit';
 import AuditShowCard from '../../components/AuditShowCard';
-// import { AuditContext } from './AuditContext';
+import Header from '../../components/Header';
 
 
 
 
 function AuditShow(props) {
-    let navigate = useNavigate()
     const {id} = useParams();
     const [audit, setAudit] = useState([]);
     const [company, setCompany] = useState(null);
@@ -23,18 +22,15 @@ function AuditShow(props) {
 
     function fetchAudit() {
         AuditModel.show(id).then((data) => {
-            
             setAudit(data.audit);
             setCompany(data.audit.company._id)
-            
-            console.log(data.audit._id)
         });
     }
 
     /* --------this is here if we want to add delete to this later --------*/
-    // function deleteCompany() {
-    //     CompanyModel.delete(id).then(data => {
-    //         navigate('/companies')
+    // function deleteAudit() {
+    //     AuditModel.delete(id).then(data => {
+    //         navigate('/audits')
     //     })
     // }
 
@@ -42,20 +38,19 @@ function AuditShow(props) {
 
     return( 
         <>
-        
+        <Header />
         <div>
             <AuditShowCard {...audit} />
         </div>
+        <div className='auditShowBtns'>
+            {/* <Link to={`/audits/${id}/companyedit`}> */}
+                <button className='editBtn auditBtn'>Edit</button>
+            {/* </Link> */}
         <NavLink to={`/companies/${company}` }>
-            <button>
+            <button className='submitBtn auditBtn'>
                 Client
             </button>
         </NavLink>
-        <div>
-            {/* <button onClick={deleteCompany}>Delete</button> */}
-            {/* <Link to={`/audits/${id}/companyedit`}> */}
-                <button>Edit</button>
-            {/* </Link> */}
         </div>
         </>
     )

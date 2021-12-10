@@ -1,38 +1,192 @@
-.App {
-  text-align: center;
+:root {
+    --secondaryColor: rgba(247, 148, 0);
+    --mainColor: rgb(4, 149, 192);
+    --editBtnColor: rgb(36, 157, 60);
+    --deleteBtnColor: rgb(215, 47, 60);
+    --submitBtnColor: rgb(97, 106, 114);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Spartan&display=swap');
+
+body {
+    background-color: var(--mainColor);
+    color: white;
+    font-family: 'Spartan', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*----------------------BUTTONS---------------------------*/
+
+.editBtn {
+    color: white;
+    background-color: var(--editBtnColor);
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.deleteBtn {
+    color: white;
+    background-color: var(--deleteBtnColor);
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.submitBtn {
+    color: white;
+    background-color: var(--submitBtnColor);
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*-------------------END OF BUTTONS------------------------*/
+
+/*-----------------------HEADER CSS------------------------*/
+
+.headerDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--secondaryColor);
+}
+
+.headerList {
+    display: flex;
+    
+}
+
+.headerListItem {
+    list-style: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.headerListBtn {
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: var(--mainColor);
+    color: white;
+    border-radius: 5px;
+}
+
+/*---------------------END OF HEADER STYLES-----------------*/
+
+/*-----------------------AUTH FORMS------------------------*/
+
+.authDiv {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.authForm {
+    border-radius: 10px;
+    border: 2px solid white;
+    padding-left: 175px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 175px;
+
+    width: fit-content;
+}
+
+.authFormDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+/*-----------------------------END OF AUTH FORMS ------------------*/
+
+/*-----------------MODEL FORMS (COMPANY/AUDIT CREATE/EDIT)--------------*/
+.modelDiv {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modelForm {
+    border-radius: 10px;
+    border: 2px solid white;
+    padding-left: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 10px;
+    
+}
+
+.modelFormDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+.modelFormInput {
+    width: 50vw;
+}
+
+/*---------------------------------COMPANY SHOW PAGE--------------------*/
+.companyInfo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.companyShowBtn {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+/*------------------------AUDIT SHOW PAGE (W/AUDIT CARD)------------*/
+
+
+.auditShowListItem {
+    list-style: none;
+    margin: 5px;
+    font-size: 20px;
+}
+
+.auditShowBtns {
+    display: flex;
+}
+
+.auditBtn {
+    margin-left: 10px;
+}
+
+/*--------------------------AUDIT/COMPANY LIST PAGE--------------------------*/
+
+.modelListDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.modelListCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

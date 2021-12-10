@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthModel from "../../models/auth";
-
+import Header from '../../components/Header';
 
 function UserCreate() {
     const navigate = useNavigate();
@@ -21,10 +21,12 @@ function UserCreate() {
     }
 
     return (
-        <div>
+        <>
+        <Header />
+        <div className='authDiv'>
         <h2>Register</h2>
-        <form onSubmit={handleSubmit}>
-            <div className='form-input'>
+        <form className='authForm' onSubmit={handleSubmit}>
+            <div className='form-input authFormDiv'>
             <label htmlFor='username'>Username</label>
             <input
                 type='text'
@@ -33,7 +35,7 @@ function UserCreate() {
                 value={username}
             />
             </div>
-            <div className='form-input'>
+            <div className='form-input authFormDiv'>
             <label htmlFor='email'>Email</label>
             <input
                 type='text'
@@ -42,7 +44,7 @@ function UserCreate() {
                 value={email}
             />
             </div>
-            <div className='form-input'>
+            <div className='form-input authFormDiv'>
             <label htmlFor='password'>Password</label>
             <input
                 type='text'
@@ -52,9 +54,12 @@ function UserCreate() {
             />
             </div>
 
-            <input type='submit' value='Save!' />
+            <div className='authFormDiv'>
+                    <input  className='submitBtn' type='submit' value='Register' />
+            </div>
         </form>
         </div>
+        </>
     );
 
 
