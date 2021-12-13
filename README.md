@@ -40,7 +40,7 @@ before putting the project down for a while.
  ![Screen Shot 2021-12-09 at 11 22 21 AM](https://user-images.githubusercontent.com/68616195/145445181-410a847c-5eb3-4949-9537-f7b0a8988467.png)
 
 
-#how to access and use highstreethub
+# how to access and use highstreethub
 
 1. Open your terminal and create a directory you want to store the app in. Then clone it from my github
 ```
