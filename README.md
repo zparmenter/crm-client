@@ -39,3 +39,25 @@ before putting the project down for a while.
 # ERD
  ![Screen Shot 2021-12-09 at 11 22 21 AM](https://user-images.githubusercontent.com/68616195/145445181-410a847c-5eb3-4949-9537-f7b0a8988467.png)
 
+
+#how to access and use highstreethub
+
+1. Open your terminal and create a directory you want to store the app in. Then clone it from my github
+```
+git clone https://github.com/zparmenter/highstreethub-client.git
+git clone https://github.com/zparmenter/highstreethub-api.git
+```
+2. make sure you have two terminal windows open (one for client, one for api) and run npm install in BOTH terminals
+```
+npm install
+```
+3. now, run npm start, register an account and login
+```
+npm start
+```
+
+
+
+
+
+
