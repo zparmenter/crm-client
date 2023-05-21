@@ -1,4 +1,4 @@
-const url = `https://highstreethub.herokuapp.com/api/v1`
+const url = `https://pink-fuzzy-crocodile.cyclic.app/api/v1`
 
 class AuthModel {
 
