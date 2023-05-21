@@ -6,10 +6,10 @@ function CompanyCard(props) {
       <>
         <div className='modelListCard'>
           <div>
-            <h1>{ props.companyName }</h1>
+            <h6>{ props.companyName }</h6>
           </div>
           <div>
-            <img style={{height: '200px', width: '200px', borderRadius: '50%' }}src={props.logo} alt={props.companyName} />
+            <img src={props.logo} alt={props.companyName} />
           </div>
         </div>
       </>
