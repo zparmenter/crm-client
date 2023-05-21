@@ -12,9 +12,9 @@ function Header() {
         <>
         {user ? (
             <div className='headerDiv'>
-            <Link to={'/'}>
-                <h2>Home</h2>
-            </Link>
+                <Link to={'/'}>
+                    <h2>Home</h2>
+                </Link>
                 <ul className='headerList'>
                     <li className='headerListItem'>
                         <Link to={'/companies'}>
@@ -26,8 +26,6 @@ function Header() {
                             <button className='headerListBtn'>audits</button>
                         </Link>
                     </li>
-                </ul>
-                <ul className='headerList'>
                     <li className='headerListItem'>
                         <button className='headerListBtn' onClick={() => { setUser(); navigate('/')}}>logout</button>
                     </li>
@@ -40,23 +38,21 @@ function Header() {
             <Link to={'/'}>
                 <h2>Home</h2>
             </Link>
-                <ul className='headerList'>
-                </ul>
-                <ul className='headerList'>
-                    <li class='headerListItem'>
-                        <Link to={'/register'}>
-                            <button class='headerListBtn'>register</button>
-                        </Link>
-                    </li>
-                    <li className='headerListItem'>
-                        <Link to={'/login'}>
-                            <button className='headerListBtn'>login</button>
-                        </Link>
-                    </li>
-                    <li className='headerListItem'>
-                        <button className='headerListBtn' onClick={() => { setUser(); navigate('/')}}>logout</button>
-                    </li>
-                </ul>
+            <ul className='headerList'>
+                <li className='headerListItem'>
+                    <Link to={'/register'}>
+                        <button className='headerListBtn'>register</button>
+                    </Link>
+                </li>
+                <li className='headerListItem'>
+                    <Link to={'/login'}>
+                        <button className='headerListBtn'>login</button>
+                    </Link>
+                </li>
+                <li className='headerListItem'>
+                    <button className='headerListBtn' onClick={() => { setUser(); navigate('/')}}>logout</button>
+                </li>
+            </ul>
         </div>)}
         </>
     );
