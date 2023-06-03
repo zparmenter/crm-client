@@ -8,17 +8,31 @@ import Header from '../../components/Header';
 function CompanyShow(props) {
     let navigate = useNavigate()
     const {id} = useParams();
-    const [company, setCompany] = useState(null);
-    
+    const [company, setCompany] = useState({
+        companyName: null,
+        companyContact: null,
+        companyEmail: null,
+        companyPhoneNumber: null,
+        companyLogo: null,
+    });
 
     useEffect(function(){
         fetchCompany()
+
+        //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 
     async function fetchCompany() {
         await CompanyModel.show(id).then((data) => {
-            setCompany(data.company);
+            console.log(data.company);
+            setCompany({
+                companyName: data.company.companyName,
+                companyContact: data.company.companyContact,
+                companyEmail: data.company.email,
+                companyPhoneNumber: data.company.phoneNumber,
+                companyLogo: data.company.logo
+            });
         });
     }
 
@@ -40,13 +54,16 @@ function CompanyShow(props) {
         <>
         <Header />
         <div>
-            <CompanyCard {...company} />
+            <CompanyCard 
+                companyName={company.companyName} 
+                logo={company.companyLogo}
+            />
         </div>
         <div className='companyInfo'>
-            Company Name: {JSON.stringify(company, ['companyName'])}<br/>
-            Contact: {JSON.stringify(company, ['companyContact'])}<br/>
-            Email: {JSON.stringify(company, ['email'])}<br/>
-            Phone Number: {JSON.stringify(company, ['phoneNumber'])}<br/>
+            Company Name: {company.companyName}<br/>
+            Contact: {company.companyContact}<br/>
+            Email: {company.companyEmail}<br/>
+            Phone Number: {company.companyPhoneNumber}<br/>
         </div>
         <div>
             <button className='deleteBtn companyShowBtn' onClick={deleteCompany}>Delete</button>

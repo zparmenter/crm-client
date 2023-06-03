@@ -3,12 +3,14 @@ import React from "react";
 
 
 function AuditShowCard(props) {
-    // console.log(props.company.companyName)
+    //console.log(props.company.companyName)
+
+    // console.log(props.company.companyName);
   return (
     
     <>
         <div>
-            <h1>{ JSON.stringify(props.company, ['companyName'])}</h1>
+            <h1>{props.companyName}</h1>
         </div>
         <ul>
             <li className='auditShowListItem'>Phone: {props.phoneNumber}</li>
