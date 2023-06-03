@@ -11,7 +11,7 @@ function Header() {
         
         <>
         {user ? (
-            <div className='headerDiv'>
+            <nav className='headerDiv'>
                 <Link to={'/'}>
                     <h2>Home</h2>
                 </Link>
@@ -30,11 +30,11 @@ function Header() {
                         <button className='headerListBtn' onClick={() => { setUser(); navigate('/')}}>logout</button>
                     </li>
                 </ul>
-        </div>
+        </nav>
         ) : 
             
         (
-        <div className='headerDiv'>
+        <nav className='headerDiv'>
             <Link to={'/'}>
                 <h2>Home</h2>
             </Link>
@@ -53,7 +53,7 @@ function Header() {
                     <button className='headerListBtn' onClick={() => { setUser(); navigate('/')}}>logout</button>
                 </li>
             </ul>
-        </div>)}
+        </nav>)}
         </>
     );
 }
